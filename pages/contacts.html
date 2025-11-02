@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <style>
+        body { margin:0; padding:0 20px; font-family:Arial,sans-serif; line-height:1.5; background:#f9f9f9; color:#333; }
+        nav ul { list-style:none; padding:0; display:flex; gap:15px; flex-wrap:wrap; }
+        nav ul li a { text-decoration:none; color:#333; padding:5px 12px; border-radius:5px; transition:0.3s; }
+        nav ul li a:hover { background:#eee; }
+        h1,h2 { margin:20px 0 10px 0; padding:10px; }
+        main { max-width:900px; margin:0 auto; }
+        form { display:flex; flex-direction:column; gap:15px; }
+        fieldset { border:1px solid #ccc; border-radius:5px; padding:15px; }
+        legend { font-weight:bold; }
+        input[type="text"], input[type="email"], input[type="number"], select, textarea { width:100%; padding:5px; margin-top:5px; border-radius:5px; border:1px solid #ccc; }
+        button { padding:8px 15px; border:none; border-radius:5px; cursor:pointer; background:#333; color:white; transition:0.3s; }
+        button:hover { background:#555; }
+        footer { margin-top:40px; text-align:center; padding:15px; border-top:1px solid #ccc; background:#fff; border-radius:5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Форма контакту</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="about.html">Про мене</a></li>
+                <li><a href="articles.html">Статті</a></li>
+                <li><a href="contacts.html">Форма</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="anchors.html">Якорі</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Особиста інформація</legend>
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="age">Вік:</label>
+                <input type="number" id="age" name="age" min="1" max="120">
+                
+                <label>Стать:</label>
+                <input type="radio" id="male" name="gender" value="male"><label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="gender" value="female"><label for="female">Жіноча</label>
+            </fieldset>
+            <fieldset>
+                <legend>Додаткова інформація</legend>
+                <label>Інтереси:</label>
+                <input type="checkbox" name="interests" value="programming"> Програмування<br>
+                <input type="checkbox" name="interests" value="web"> Веб-розробка<br>
+                <input type="checkbox" name="interests" value="algorithms"> Алгоритми
+                
+                <label for="country">Країна:</label>
+                <select id="country" name="country">
+                    <option value="ukraine">Україна</option>
+                    <option value="poland">Польща</option>
+                    <option value="usa">США</option>
+                </select>
+                
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="4" cols="40"></textarea>
+            </fieldset>
+            <button type="submit">Відправити</button>
+            <button type="reset">Очистити</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Скляровський Данило</p>
+    </footer>
+</body>
+</html>
